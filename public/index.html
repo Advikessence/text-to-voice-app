@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🗣️ Text to Voice Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadTheme()">
+  <!-- Floating Theme Toggle -->
+  <div class="fab" onclick="toggleTheme()">🌙</div>
+
+  <div class="container">
+    <h1>🗣️ Text to Voice Generator</h1>
+
+    <textarea id="textInput" placeholder="Type your message here..."></textarea>
+
+    <div class="controls">
+      <label for="voiceSelect">Voice:</label>
+      <select id="voiceSelect">
+        <option value="xiaoyan">🧑‍🦰 Xiao Yan (Female)</option>
+        <option value="xiaoyu">👨‍🦱 Xiao Yu (Male)</option>
+        <option value="aixu">👩‍🦲 Ai Xu (Emotional Female)</option>
+        <option value="aiwan">🇭🇰 Ai Wan (Cantonese)</option>
+      </select>
+    </div>
+
+    <div class="controls">
+      <label for="formatSelect">Format:</label>
+      <select id="formatSelect">
+        <option value="mp3">MP3</option>
+        <option value="wav">WAV</option>
+      </select>
+    </div>
+
+    <button onclick="generateVoice()">🔊 Generate Voice</button>
+
+    <audio id="audioPlayer" controls></audio>
+
+    <button onclick="downloadAudio()" id="downloadBtn" disabled>⬇️ Download Audio</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
